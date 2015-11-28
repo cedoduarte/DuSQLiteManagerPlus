@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>930</width>
+    <height>458</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/base_de_datos.png</normaloff>:/base_de_datos.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QSplitter" name="splitter_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QTreeWidget" name="treeWidget">
+       <column>
+        <property name="text">
+         <string>Bases de datos</string>
+        </property>
+        <property name="icon">
+         <iconset resource="res.qrc">
+          <normaloff>:/bases_de_datos.png</normaloff>:/bases_de_datos.png</iconset>
+        </property>
+       </column>
+      </widget>
+      <widget class="QSplitter" name="splitter">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <widget class="QTextEdit" name="textEdit"/>
+       <widget class="QTableView" name="tableView"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>930</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionNuevo"/>
+    <addaction name="actionAbrir"/>
+    <addaction name="separator"/>
+    <addaction name="actionQuitar"/>
+   </widget>
+   <widget class="QMenu" name="menuEditar">
+    <property name="title">
+     <string>Editar</string>
+    </property>
+    <addaction name="actionCopiar"/>
+    <addaction name="actionCortar"/>
+    <addaction name="actionPegar"/>
+   </widget>
+   <widget class="QMenu" name="menuSQL">
+    <property name="title">
+     <string>SQL</string>
+    </property>
+    <addaction name="actionEjecutar_SQL"/>
+   </widget>
+   <widget class="QMenu" name="menuHerramientas">
+    <property name="title">
+     <string>Herramientas</string>
+    </property>
+    <addaction name="actionAjustes"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuEditar"/>
+   <addaction name="menuSQL"/>
+   <addaction name="menuHerramientas"/>
+   <addaction name="menuAyuda"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNuevo"/>
+   <addaction name="actionAbrir"/>
+   <addaction name="separator"/>
+   <addaction name="actionCopiar"/>
+   <addaction name="actionCortar"/>
+   <addaction name="actionPegar"/>
+   <addaction name="separator"/>
+   <addaction name="actionEjecutar_SQL"/>
+   <addaction name="separator"/>
+   <addaction name="actionQuitar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionNuevo">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/nuevo.png</normaloff>:/nuevo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nuevo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionAbrir">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/abrir.png</normaloff>:/abrir.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionQuitar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/quitar.png</normaloff>:/quitar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Quitar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCopiar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/copiar.png</normaloff>:/copiar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionCortar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/cortar.png</normaloff>:/cortar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cortar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionPegar">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/pegar.png</normaloff>:/pegar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionEjecutar_SQL">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ejecutar_sql.png</normaloff>:/ejecutar_sql.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ejecutar SQL</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionAjustes">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/ajustes.png</normaloff>:/ajustes.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ajustes</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="text">
+    <string>Acerca de</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

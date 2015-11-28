@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>copiar.png</file>
+        <file>cortar.png</file>
+        <file>pegar.png</file>
+        <file>quitar.png</file>
+        <file>nuevo.png</file>
+        <file>abrir.png</file>
+        <file>base_de_datos.png</file>
+        <file>bases_de_datos.png</file>
+        <file>ejecutar_sql.png</file>
+        <file>ajustes.png</file>
+    </qresource>
+</RCC>

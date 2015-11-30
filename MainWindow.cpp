@@ -44,7 +44,9 @@ void MainWindow::closeEvent(QCloseEvent *e)
 
 void MainWindow::on_actionNuevo_triggered()
 {
-    auto filename = QFileDialog::getSaveFileName(this, "Nuevo");
+    auto filename = QFileDialog::getSaveFileName(this, "Nuevo",
+                                                 QDir::rootPath(),
+                                                 "Database file (*.db)");
     if (filename.isEmpty()) {
         return;
     }
@@ -53,7 +55,9 @@ void MainWindow::on_actionNuevo_triggered()
 
 void MainWindow::on_actionAbrir_triggered()
 {
-    auto filenames = QFileDialog::getOpenFileNames(this, "Abrir");
+    auto filenames = QFileDialog::getOpenFileNames(this, "Abrir",
+                                                   QDir::rootPath(),
+                                                   "Database file (*.db)");
     for (const auto &filename : filenames) {
         addNewDatabase(filename);
     }
